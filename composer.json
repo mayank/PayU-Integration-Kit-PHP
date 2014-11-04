@@ -1,0 +1,15 @@
+{
+    "name": "payu-india/payu-php-sdk",
+    "description": "PayU PHP SDK",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Mayank Mishra",
+            "email": "nitb.scholar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}
