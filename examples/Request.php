@@ -12,7 +12,9 @@
  * @author mayank
  */
 
-$product1 = new Product;
+require_once __DIR__.'/../vendor/autoload.php';
+
+$product1 = new PayU\Product;
 
 $product1->setDescription('Product 1 Description');
 $product1->setIsRequired(false);
