@@ -2,7 +2,7 @@
 
 namespace PayU;
 
-
+use PayU\Config\Config;
 use PayU\Libs\HttpCurlClient;
 /*
  * To change this license header, choose License Headers in Project Properties.
