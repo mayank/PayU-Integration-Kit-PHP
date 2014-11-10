@@ -2,7 +2,7 @@
 
 namespace PayU;
 
-use PayU\config\Config;
+use PayU\Config\Config;
 use PayU\Libs\Encryption;
 /*
  * To change this license header, choose License Headers in Project Properties.
