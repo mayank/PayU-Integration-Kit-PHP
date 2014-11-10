@@ -13,8 +13,8 @@
         "php": ">=5.4.6"
     },
     "autoload": {
-        "psr-0": {
-            "PayU": "src/"
-        }
+        "psr-4" : {
+	    "PayU" : "src/PayU"
+	}
     }
 }
