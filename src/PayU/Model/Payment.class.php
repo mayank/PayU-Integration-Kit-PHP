@@ -22,12 +22,36 @@ class Payment {
     
     private $amount;
     
-    private $productInfo;
-    
     private $firstName;
     
     private $emailId;
+	
+	private $phone;
+	
+	private $productInfo;
+	
+	private $surl;
+	
+	private $furl;
+	
+	private $service_provider = 'payu_paisa';
+	
+	private $lastName;
+	
+	private $curl;
+	
+	private $address1;
+	
+	private $address2;
     
+	private $city;
+	
+	private $state;
+	
+	private $country;
+	
+	private $zipcode;
+	
     private $udf1;
     
     private $udf2;
@@ -192,23 +216,35 @@ class Payment {
     
     public function toArray() {
         return array(
-            'key'           => $this->key,
-            'hash'          => $this->hash,
-            'txnid'         => $this->transactionId,
-            'amount'        => $this->amount,
-            'productinfo'   => $this->productInfo,
-            'firstname'     => $this->firstName,
-            'email'         => $this->emailId,
-            'udf1'          => $this->udf1,
-            'udf2'          => $this->udf2,
-            'udf3'          => $this->udf3,
-            'udf4'          => $this->udf4,
-            'udf5'          => $this->udf5,
-            'udf6'          => $this->udf6,
-            'udf7'          => $this->udf7,
-            'udf8'          => $this->udf8,
-            'udf9'          => $this->udf9,
-            'udf10'          => $this->udf10,
+            'key'          		=> $this->key,
+            'hash'          	=> $this->hash,
+            'txnid'         	=> $this->transactionId,
+            'amount'        	=> $this->amount,
+            'firstname'     	=> $this->firstName,
+            'email'         	=> $this->emailId,
+			'phone'				=> $this->phone,
+			'productinfo'   	=> $this->productInfo,
+			'surl'				=> $this->surl,
+			'furl'				=> $this->furl,
+			'service_provider'	=> $this->service_provider,
+			'lastname'			=> $this->lastName,
+			'curl'				=> $this->curl,
+			'address1'			=> $this->address1,
+			'address2'			=> $this->address2,
+			'city'				=> $this->city,
+			'state'				=> $this->state,
+			'country'			=> $this->country,
+			'zipcode'			=> $this->zipcode,
+            'udf1'          	=> $this->udf1,
+            'udf2'          	=> $this->udf2,
+            'udf3'          	=> $this->udf3,
+            'udf4'          	=> $this->udf4,
+            'udf5'          	=> $this->udf5,
+            'udf6'          	=> $this->udf6,
+            'udf7'          	=> $this->udf7,
+            'udf8'          	=> $this->udf8,
+            'udf9'          	=> $this->udf9,
+            'udf10'          	=> $this->udf10,
         );
     }
     

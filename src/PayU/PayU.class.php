@@ -19,6 +19,7 @@ class PayU {
  
     const HASH_DELIMITER = '|';
     const KEY_LENGTH = 20;
+	const HASH_SEQUENCE = 'key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10';
     
     private $payment;
     
@@ -59,8 +60,15 @@ class PayU {
     
     private function createHashSequence() {
         
-        $hashSequence = implode( self::HASH_DELIMITER, $this->payment->toArray() );
-        $hashSequence .= self::HASH_DELIMITER. Config::SALT;
+        $hashSequenceArray = explode( self::HASH_DELIMITER, self::HASH_SEQUENCE );
+		$toArray = $this->payment->toArray();
+		$hashSequence = '';
+		
+		foreach( $hashSequenceArray as $hashKeys ){
+			$hashSequence .= $toArray[ $hashKeys ] . self::HASH_DELIMITER;
+		}
+		
+        $hashSequence .= Config::SALT;
  
         return $hashSequence;
     }

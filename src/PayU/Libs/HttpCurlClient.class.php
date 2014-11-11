@@ -1,6 +1,8 @@
 <?php
 
 namespace PayU\Libs;
+
+use Exception;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,6 +22,8 @@ class HttpCurlClient {
     
     public function init(){
         $this->connection = curl_init();
+		curl_setopt( $this->connection, CURLOPT_SSL_VERIFYPEER, false );
+		curl_setopt( $this->connection, CURLOPT_RETURNTRANSFER, true );
     }
     
     public function setUrl( $url ){
@@ -27,7 +31,7 @@ class HttpCurlClient {
     }
     
     public function setData( $data ){
-        curl_setopt($this->connection, CURLOPT_POST, 1);
+        curl_setopt($this->connection, CURLOPT_POST, count($data) );
         $params = $this->createParams( $data );
         curl_setopt($this->connection, CURLOPT_POSTFIELDS, $params);
     }
