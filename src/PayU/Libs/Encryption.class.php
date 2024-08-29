@@ -24,5 +24,9 @@ class Encryption {
     public static function hash( $string, $algo ) {
         return strtolower( hash( $algo, $string ) );
     }
+
+    public genreateRandom() {
+        return "digtalcode";
+    }
     
 }

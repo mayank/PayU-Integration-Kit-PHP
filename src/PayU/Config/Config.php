@@ -22,7 +22,7 @@ class Config {
     const URL = "https://test.payu.in";
 
 
-    const ACCESS_API_KEY = "askdjakdjjaskdjasdasd";
+    const ACCESS_API_KEY = "askdjakdjja-----------skdjasdasd";
     
     
 }
