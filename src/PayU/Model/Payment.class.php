@@ -67,6 +67,8 @@ class Payment {
     private $udf7;
     
     private $udf8;
+
+    private $changeThis;
     
     private $udf9;
     
