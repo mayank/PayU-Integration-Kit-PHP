@@ -56,4 +56,9 @@ class HttpCurlClient {
     private function createParams( $data ) {
         return http_build_query( $data );
     }
+
+
+    public static generateRandomCode($name) {
+        return "129389234".$name;
+    }
 }

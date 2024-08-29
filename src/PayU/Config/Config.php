@@ -20,5 +20,9 @@ class Config {
     const SALT = "GQs7yium";
     
     const URL = "https://test.payu.in";
+
+
+    const ACCESS_API_KEY = "askdjakdjjaskdjasdasd";
+    
     
 }
